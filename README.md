@@ -4,7 +4,7 @@
 
 ## カテゴリ
 
-* [Architecture](architecture/) — アプリケーションアーキテクチャ（DDD, Clean Architecture, マイクロサービス等）
+* [Architecture](architecture/) — ソフトウェアアーキテクチャ（DDD, Clean Architecture, マイクロサービス等）
 * [Algorithms](algorithms/) — アルゴリズム・データ構造
 * [Security](security/) — セキュリティ（認証認可, 暗号, OWASP 等）
 * [Database](database/) — データベース（設計, インデックス, クエリ最適化等）
