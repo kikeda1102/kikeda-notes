@@ -119,3 +119,4 @@
 * [Deconstructing the Monolith](https://shopify.engineering/deconstructing-monolith-designing-software-maximizes-developer-productivity)
 * [マイクロサービス移行の代償](https://www.infoq.com/jp/news/2015/06/microservices-premium/)
 * [Shopifyはいかにしてモジュラモノリスへ移行したか](https://www.infoq.com/jp/news/2019/10/shopify-modular-monolith/)
+- [モノリス・マイクロサービスの違いとモダナイゼーションについて](https://qiita.com/k12da/items/8ef4fc446425a057f7da)
