@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" font-family="sans-serif" font-size="12">
+  <rect width="760" height="300" fill="#ffffff"/>
+  <defs>
+    <marker id="b" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#1a1a1a"/></marker>
+    <marker id="r" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#d93025"/></marker>
+  </defs>
+  <line x1="380" y1="15" x2="380" y2="285" stroke="#cccccc"/>
+
+  <!-- 一致している -->
+  <text x="190" y="30" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a1a1a">チームと境界が一致している</text>
+  <g fill="#fef7e0" stroke="#b06000" stroke-width="2">
+    <rect x="30" y="55" width="96" height="36" rx="6"/><rect x="142" y="55" width="96" height="36" rx="6"/><rect x="254" y="55" width="96" height="36" rx="6"/>
+  </g>
+  <g text-anchor="middle" fill="#1a1a1a"><text x="78" y="78">注文チーム</text><text x="190" y="78">決済チーム</text><text x="302" y="78">在庫チーム</text></g>
+  <g stroke="#1a1a1a" stroke-width="2" marker-end="url(#b)">
+    <line x1="78" y1="91" x2="78" y2="137"/><line x1="190" y1="91" x2="190" y2="137"/><line x1="302" y1="91" x2="302" y2="137"/>
+  </g>
+  <g fill="#e8f0fe" stroke="#3367d6" stroke-width="2">
+    <rect x="30" y="140" width="96" height="70" rx="8"/><rect x="142" y="140" width="96" height="70" rx="8"/><rect x="254" y="140" width="96" height="70" rx="8"/>
+  </g>
+  <g text-anchor="middle" fill="#1a1a1a"><text x="78" y="171">注文</text><text x="190" y="171">決済</text><text x="302" y="171">在庫</text></g>
+  <g text-anchor="middle" fill="#555" font-size="10"><text x="78" y="190">画面〜DB</text><text x="190" y="190">画面〜DB</text><text x="302" y="190">画面〜DB</text></g>
+  <text x="190" y="245" text-anchor="middle" fill="#188038">注文の変更は、注文チームの中で完結する</text>
+
+  <!-- 一致していない -->
+  <text x="570" y="30" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a1a1a">チームと境界が一致していない</text>
+  <g fill="#fef7e0" stroke="#b06000" stroke-width="2">
+    <rect x="410" y="65" width="320" height="40" rx="6"/><rect x="410" y="115" width="320" height="40" rx="6"/><rect x="410" y="165" width="320" height="40" rx="6"/>
+  </g>
+  <g fill="#1a1a1a"><text x="422" y="90">画面チーム</text><text x="422" y="140">API チーム</text><text x="422" y="190">DB チーム</text></g>
+  <g fill="#ffffff" stroke="#5f6368">
+    <rect x="510" y="72" width="60" height="26" rx="4"/><rect x="585" y="72" width="60" height="26" rx="4"/><rect x="660" y="72" width="60" height="26" rx="4"/>
+    <rect x="510" y="122" width="60" height="26" rx="4"/><rect x="585" y="122" width="60" height="26" rx="4"/><rect x="660" y="122" width="60" height="26" rx="4"/>
+    <rect x="510" y="172" width="60" height="26" rx="4"/><rect x="585" y="172" width="60" height="26" rx="4"/><rect x="660" y="172" width="60" height="26" rx="4"/>
+  </g>
+  <g text-anchor="middle" fill="#1a1a1a" font-size="11">
+    <text x="540" y="89">注文</text><text x="615" y="89">決済</text><text x="690" y="89">在庫</text>
+    <text x="540" y="139">注文</text><text x="615" y="139">決済</text><text x="690" y="139">在庫</text>
+    <text x="540" y="189">注文</text><text x="615" y="189">決済</text><text x="690" y="189">在庫</text>
+  </g>
+  <rect x="505" y="68" width="70" height="134" rx="6" fill="none" stroke="#d93025" stroke-width="2" stroke-dasharray="5 3"/>
+  <text x="570" y="245" text-anchor="middle" fill="#d93025">注文の変更に、3 つのチームの調整が必要になる</text>
+</svg>
