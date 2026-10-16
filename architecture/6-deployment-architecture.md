@@ -64,6 +64,10 @@
 
 #### 境界の設計
 
+モジュールの境界は、DDD の Bounded Context に合わせて切ることが多い。
+Bounded Context は、同じ用語やモデルが一貫した意味を持つ範囲のことで、範囲ごとに独立したドメインモデルを持つ。
+ただしドメインへの理解が浅いうちは Bounded Context を正しく見極めるのが難しく、境界を誤ると、変更のたびに複数のモジュールを直すことになる。
+
 ## マイクロサービス
 
 ### 利点
@@ -92,6 +96,10 @@
 
 #### 分散モノリス
 
+マイクロサービスでも、サービスの境界は Bounded Context に合わせるのが基本になる。Bounded Context ごとに独立したモデルとデータを持つという考え方が、サービスごとに DB を持つ設計につながっている。
+Bounded Context を無視して、技術的な層やテーブルの単位でサービスを分けると、1 つの変更のために複数のサービスを同時に修正・デプロイしなければならなくなる。
+このように、分割されているのにサービス同士が強く結合してしまった状態を分散モノリス（Distributed Monolith）と呼び、これはアンチパターンである。
+
 ## 比較
 
 ## 歴史的経緯
@@ -116,6 +124,7 @@
 
 * [Microservices](https://martinfowler.com/articles/microservices.html)
 * [Microservice Premium](https://martinfowler.com/bliki/MicroservicePremium.html)
+* [Bounded Context](https://martinfowler.com/bliki/BoundedContext.html)
 * [Deconstructing the Monolith](https://shopify.engineering/deconstructing-monolith-designing-software-maximizes-developer-productivity)
 * [マイクロサービス移行の代償](https://www.infoq.com/jp/news/2015/06/microservices-premium/)
 * [Shopifyはいかにしてモジュラモノリスへ移行したか](https://www.infoq.com/jp/news/2019/10/shopify-modular-monolith/)
