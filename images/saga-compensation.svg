@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" font-family="sans-serif" font-size="14">
+  <rect width="600" height="340" fill="#ffffff"/>
+  <defs>
+    <marker id="b" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#1a1a1a"/></marker>
+    <marker id="r" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#d93025"/></marker>
+  </defs>
+  <text x="300" y="26" text-anchor="middle" font-weight="bold" fill="#1a1a1a">各ステップは、自分の DB を更新してその場でコミットする</text>
+
+  <rect x="15" y="45" width="170" height="86" rx="8" fill="#e8f0fe" stroke="#3367d6" stroke-width="2"/>
+  <text x="100" y="70" text-anchor="middle" font-weight="bold" fill="#1a1a1a">注文サービス</text>
+  <text x="100" y="92" text-anchor="middle" fill="#1a1a1a">① 注文を作成</text>
+  <rect x="55" y="102" width="90" height="20" rx="10" fill="#e6f4ea" stroke="#188038"/>
+  <text x="100" y="116" text-anchor="middle" font-size="11" fill="#188038">コミット済み</text>
+
+  <rect x="215" y="45" width="170" height="86" rx="8" fill="#e8f0fe" stroke="#3367d6" stroke-width="2"/>
+  <text x="300" y="70" text-anchor="middle" font-weight="bold" fill="#1a1a1a">決済サービス</text>
+  <text x="300" y="92" text-anchor="middle" fill="#1a1a1a">② 支払いを確定</text>
+  <rect x="255" y="102" width="90" height="20" rx="10" fill="#e6f4ea" stroke="#188038"/>
+  <text x="300" y="116" text-anchor="middle" font-size="11" fill="#188038">コミット済み</text>
+
+  <rect x="415" y="45" width="170" height="86" rx="8" fill="#fce8e6" stroke="#d93025" stroke-width="2"/>
+  <text x="500" y="70" text-anchor="middle" font-weight="bold" fill="#1a1a1a">在庫サービス</text>
+  <text x="500" y="92" text-anchor="middle" fill="#d93025">③ 在庫を確保 → 失敗</text>
+  <text x="500" y="116" text-anchor="middle" font-size="11" fill="#d93025">ロールバック（自分の DB のみ）</text>
+
+  <g stroke="#1a1a1a" stroke-width="2" marker-end="url(#b)">
+    <line x1="185" y1="88" x2="212" y2="88"/>
+    <line x1="385" y1="88" x2="412" y2="88"/>
+  </g>
+
+  <text x="300" y="160" text-anchor="middle" font-size="12" fill="#d93025">① と ② はコミット済みなので、ロールバックの対象にならない</text>
+  <text x="300" y="178" text-anchor="middle" font-size="12" fill="#d93025">→ 打ち消す内容の更新を、新しいトランザクションとして逆順に実行する</text>
+
+  <rect x="215" y="200" width="170" height="70" rx="8" fill="#ffffff" stroke="#d93025" stroke-width="2" stroke-dasharray="5 3"/>
+  <text x="300" y="222" text-anchor="middle" fill="#d93025">④ 返金</text>
+  <text x="300" y="242" text-anchor="middle" font-size="11" fill="#1a1a1a">返金の記録を追加</text>
+  <text x="300" y="260" text-anchor="middle" font-size="11" fill="#188038">→ コミット</text>
+
+  <rect x="15" y="200" width="170" height="70" rx="8" fill="#ffffff" stroke="#d93025" stroke-width="2" stroke-dasharray="5 3"/>
+  <text x="100" y="222" text-anchor="middle" fill="#d93025">⑤ 注文をキャンセル</text>
+  <text x="100" y="242" text-anchor="middle" font-size="10" fill="#1a1a1a">状態を「キャンセル済み」に更新</text>
+  <text x="100" y="260" text-anchor="middle" font-size="11" fill="#188038">→ コミット</text>
+
+  <g stroke="#d93025" stroke-width="2" fill="none" marker-end="url(#r)">
+    <path d="M565 131 L565 235 L388 235"/>
+    <line x1="215" y1="235" x2="188" y2="235"/>
+  </g>
+
+  <text x="300" y="302" text-anchor="middle" font-size="12" fill="#1a1a1a">④ と ⑤ が補償トランザクション</text>
+  <text x="300" y="322" text-anchor="middle" font-size="11" fill="#555">元のレコードは消さず、「支払って返金した」「注文してキャンセルした」という記録が残る</text>
+</svg>
